@@ -8,7 +8,11 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float walkSpeed;
     [SerializeField] private float sprintSpeed;
+    [SerializeField] private Animator anim;
     private float currentSpeed;
+    private float lastMoveY;
+    private Vector2 lastMoveDirection;
+    private bool isMoving;
     private bool isSprinting;
     private bool isInteracting;
     private Rigidbody2D rb;
@@ -37,7 +41,8 @@ public class Player : MonoBehaviour
         if(dialogueUI.IsOpen) return;
         ProcessInputs();
         Interact();
-
+        Move();
+        Animate();
         if(Input.GetKeyDown(KeyCode.Tab))
         {
             if(QuestLogUIController.Instance.gameObject.activeInHierarchy) QuestLogUIController.Instance.Hide();
@@ -49,6 +54,7 @@ public class Player : MonoBehaviour
     {
         if(dialogueUI.IsOpen) return;
         Move();
+        Animate();
     }
 
     void ProcessInputs()
@@ -57,23 +63,50 @@ public class Player : MonoBehaviour
         float verticalMove = Input.GetAxisRaw("Vertical");
         isInteracting = Input.GetKeyDown(KeyCode.E);
         isSprinting = Input.GetKey(KeyCode.LeftShift);
-
         moveDirection = new Vector2 (horizontalMove, verticalMove).normalized;
+
+        if(verticalMove != 0 || horizontalMove != 0)
+        {
+            isMoving = true;
+        }
+
+        else
+        {
+            isMoving = false;
+        }
+
+        if(verticalMove != 0)
+        {
+            lastMoveY = verticalMove;
+        }
     }
 
     void Move()
     {   
-        if(isSprinting)
+        if(isMoving && !isSprinting)
+        {
+            currentSpeed = walkSpeed;
+        }
+
+        else if(isMoving && isSprinting)
         {
             currentSpeed = sprintSpeed;
         }
 
         else
         {
-            currentSpeed = walkSpeed;
+            currentSpeed = 0;
         }
-
+        
         rb.velocity = (moveDirection * currentSpeed);
+    }
+
+    void Animate()
+    {
+        anim.SetFloat("AnimMoveX", moveDirection.x);
+        anim.SetFloat("AnimMoveY", moveDirection.y);
+        anim.SetFloat("AnimMoveSpeed", currentSpeed);
+        anim.SetFloat("AnimLastMoveY", lastMoveY);
     }
 
     void Interact()
@@ -86,6 +119,8 @@ public class Player : MonoBehaviour
 
     public List<QuestSO> GetQuestList() => questList;
     
+
+
     /*
     if(Player.Instance.GetQuestList().Contains(QuestSO quest))
     {

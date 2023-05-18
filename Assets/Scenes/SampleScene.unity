@@ -1087,6 +1087,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5287365310358370971, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287365310358370971, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287365310358370971, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5287365310495450889, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1317,6 +1329,7 @@ GameObject:
   - component: {fileID: 1652070608}
   - component: {fileID: 1652070607}
   - component: {fileID: 1652070611}
+  - component: {fileID: 1652070612}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1362,8 +1375,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.8, y: 1.11}
+    newSize: {x: 0.59, y: 1.07}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1412,12 +1425,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 8784c2419c40d7c41b056a5a1991200f, type: 3}
-  m_Color: {r: 0.040850822, g: 0.26207045, b: 0.9622642, a: 1}
+  m_Sprite: {fileID: 168852463, guid: d625549b2cc97454ea5ae06fb8e4aa5f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.59, y: 1.07}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1452,6 +1465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 5
   sprintSpeed: 8
+  anim: {fileID: 1652070612}
   questList:
   - {fileID: 11400000, guid: 3950d721086861b4a88d2ed334aaebe2, type: 2}
   - {fileID: 11400000, guid: 7da35e79055b91c48827e3bd624a5f5b, type: 2}
@@ -1459,6 +1473,26 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0375194833ae3ae4d83d60e34e67b0cd, type: 2}
   - {fileID: 11400000, guid: c0a16dadb86beec46b48d96fe41b06a5, type: 2}
   dialogueUI: {fileID: 200514657}
+--- !u!95 &1652070612
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652070606}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b64f90128331dee47a0ccce349e18e20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1665027380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,6 +1745,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 11400000, guid: 09ed2c65c01398849b0505d65735a5b2, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: QuestController, Assembly-CSharp
+          m_MethodName: AddQuest
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 7da35e79055b91c48827e3bd624a5f5b, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
