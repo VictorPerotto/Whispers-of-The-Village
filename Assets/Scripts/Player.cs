@@ -153,7 +153,6 @@ public class Player : MonoBehaviour
         {
             return true;
         }
-
         else return false;
     }
 }
