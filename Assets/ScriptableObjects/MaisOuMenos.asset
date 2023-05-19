@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: MaisOuMenos
   m_EditorClassIdentifier: 
   dialogue:
-  - "\xC9 uma pena, tem algo que eu possa fazer para ajudar?\n"
-  responses:
-  - responseText: "N\xE3o"
-    dialogueObject: {fileID: 11400000, guid: 463432d7f8ffd704797a965e424065a6, type: 2}
+  - "SOME VOC\xCA\n"
+  responses: []

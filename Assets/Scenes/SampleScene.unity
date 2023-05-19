@@ -855,6 +855,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 200514656}
     m_Modifications:
+    - target: {fileID: 4694850094947807007, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694850094947807007, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694850094947807007, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694850094947807007, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694850094947807007, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5287365308569626400, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1326,10 +1346,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1652070610}
   - component: {fileID: 1652070609}
-  - component: {fileID: 1652070608}
   - component: {fileID: 1652070607}
   - component: {fileID: 1652070611}
   - component: {fileID: 1652070612}
+  - component: {fileID: 1652070613}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1358,32 +1378,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1652070608
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652070606}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8, y: 1.11}
-    newSize: {x: 0.59, y: 1.07}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &1652070609
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1466,12 +1460,8 @@ MonoBehaviour:
   walkSpeed: 5
   sprintSpeed: 8
   anim: {fileID: 1652070612}
-  questList:
-  - {fileID: 11400000, guid: 3950d721086861b4a88d2ed334aaebe2, type: 2}
-  - {fileID: 11400000, guid: 7da35e79055b91c48827e3bd624a5f5b, type: 2}
-  itemList:
-  - {fileID: 11400000, guid: 0375194833ae3ae4d83d60e34e67b0cd, type: 2}
-  - {fileID: 11400000, guid: c0a16dadb86beec46b48d96fe41b06a5, type: 2}
+  questList: []
+  itemList: []
   dialogueUI: {fileID: 200514657}
 --- !u!95 &1652070612
 Animator:
@@ -1493,6 +1483,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &1652070613
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652070606}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.6, y: 1}
+  m_Direction: 0
 --- !u!1 &1665027380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,33 +1732,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueObject: {fileID: 11400000, guid: 7777c50ee01f0b74fa1fc035829ede80, type: 2}
   events:
-  - name: "Tudo \xF3timo "
-    onPickedResponse:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: "\xC9 mais ou menos"
-    onPickedResponse:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: Done
+  - name: Mim de quest papai
     onPickedResponse:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1869415778}
-          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
-          m_MethodName: UpdateDialogueObject
+        - m_Target: {fileID: 1652070611}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: AddQuest
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 09ed2c65c01398849b0505d65735a5b2, type: 2}
-            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_ObjectArgument: {fileID: 11400000, guid: 7da35e79055b91c48827e3bd624a5f5b, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: QuestController, Assembly-CSharp
-          m_MethodName: AddQuest
+  - name: Some daqui filho da puta
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1652070611}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: CompleteQuest
           m_Mode: 2
           m_Arguments:
             m_ObjectArgument: {fileID: 11400000, guid: 7da35e79055b91c48827e3bd624a5f5b, type: 2}

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questItemSO: {fileID: 11400000, guid: c0a16dadb86beec46b48d96fe41b06a5, type: 2}
   questName: O peixe que andava
-  questDescription: asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd
-  questGiverName: Safado
-  questEnderName: Safadona
+  questDescription: "O peixe que anda e simplesmente \xE9 assim"
+  questGiverName: Joao
+  questEnderName: Joaninha
   optionalQuestEnders:
-  - Tarada
+  - Alguem
   - Mordidosa

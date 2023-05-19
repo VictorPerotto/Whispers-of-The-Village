@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator anim;
     private float currentSpeed;
     private float lastMoveY;
+    private float alternateIdleBuffer;
     private Vector2 lastMoveDirection;
     private bool isMoving;
     private bool isSprinting;
@@ -38,11 +39,14 @@ public class Player : MonoBehaviour
    
     void Update()
     {
+        Animate();
+        alternateIdleBuffer -= Time.deltaTime;
+        
         if(dialogueUI.IsOpen) return;
         ProcessInputs();
         Interact();
         Move();
-        Animate();
+        
         if(Input.GetKeyDown(KeyCode.Tab))
         {
             if(QuestLogUIController.Instance.gameObject.activeInHierarchy) QuestLogUIController.Instance.Hide();
@@ -53,8 +57,7 @@ public class Player : MonoBehaviour
     void FixedUpdate() 
     {
         if(dialogueUI.IsOpen) return;
-        Move();
-        Animate();
+        Move();   
     }
 
     void ProcessInputs()
@@ -103,6 +106,13 @@ public class Player : MonoBehaviour
 
     void Animate()
     {
+        anim.SetFloat("AnimAlternateIdle", alternateIdleBuffer);
+
+        if (alternateIdleBuffer < 0)
+        {   
+            alternateIdleBuffer = Random.Range(4f, 8f);
+        }
+
         anim.SetFloat("AnimMoveX", moveDirection.x);
         anim.SetFloat("AnimMoveY", moveDirection.y);
         anim.SetFloat("AnimMoveSpeed", currentSpeed);
@@ -119,12 +129,32 @@ public class Player : MonoBehaviour
 
     public List<QuestSO> GetQuestList() => questList;
     
-
-
-    /*
-    if(Player.Instance.GetQuestList().Contains(QuestSO quest))
-    {
-
+    public void AddQuest(QuestSO questSO)
+    { 
+        if (HasQuest(questSO)) return;
+        Player.Instance.GetQuestList().Add(questSO);    
+        QuestLogUIController.Instance.UpdateQuestLogVisual();   
     }
-    */
+
+    public void CompleteQuest(QuestSO questSO)
+    {
+        if(HasQuest(questSO))
+        {
+            Player.Instance.GetQuestList().Remove(questSO);
+            QuestLogUIController.Instance.UpdateQuestLogVisual();   
+        }
+
+        else return;
+    }
+
+    public bool HasQuest(QuestSO questSO)
+    {
+        if(Player.Instance.GetQuestList().Contains(questSO))
+        {
+            return true;
+        }
+
+        else return false;
+    }
 }
+

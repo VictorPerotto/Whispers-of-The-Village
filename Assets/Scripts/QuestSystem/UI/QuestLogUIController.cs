@@ -25,17 +25,27 @@ public class QuestLogUIController : MonoBehaviour
         Instance = this;
     }
 
-    private void Start() 
+    private void Start()
     {
-        foreach (QuestSO quest in Player.Instance.GetQuestList()) 
+        UpdateQuestLogVisual();
+        ClearQuestInfo();
+        Hide();
+    }
+
+    public void UpdateQuestLogVisual()
+    {   
+        foreach(Transform questObj in questButtonContent)
+        {
+            Destroy(questObj.gameObject);
+        }
+
+        foreach (QuestSO quest in Player.Instance.GetQuestList())
         {
             GameObject newQuest = Instantiate(questButtonPrefab, questButtonContent);
             QuestButtonUI newQuestUI = newQuest.GetComponent<QuestButtonUI>();
             newQuestUI.questSO = quest;
             newQuestUI.UpdateButtonVisual();
         }
-
-        Hide();
     }
 
     public void UpdateQuestLogContent(QuestSO quest) 
@@ -68,9 +78,24 @@ public class QuestLogUIController : MonoBehaviour
         }
     }
 
-    public void Show()
+    private void ClearQuestInfo()
+    {
+        questName.text = "";
+        questFrom.text = "";
+        questTo.text = "";
+        questDescription.text = "";
+        questIcon.sprite = null;
+
+        foreach (Transform child in questOptionalDeliveryContent)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
+    public void Show()  
     {
         this.gameObject.SetActive(true);
+        ClearQuestInfo();
     }
 
     public void Hide()
