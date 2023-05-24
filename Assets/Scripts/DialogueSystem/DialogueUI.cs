@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueUI : MonoBehaviour
 {
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text textLabel;
     [SerializeField] private TMP_Text npcName;
-    [SerializeField] private GameObject npcSprite;
+    [SerializeField] private Image npcSprite;
 
     public bool IsOpen { get; private set; }
 
@@ -28,6 +29,8 @@ public class DialogueUI : MonoBehaviour
         IsOpen = true;
         dialogueBox.SetActive(true);
         StartCoroutine (StepThroughDialogue(dialogueObject));
+        npcName.text = dialogueObject.NpcName;
+        npcSprite.sprite = dialogueObject.NpcSprite; 
     }
 
     public void AddResponseEvents(ResponseEvent[] responseEvents)

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a84df7cba02322742b6eb24317ac3479, type: 3}
-  m_Name: Done
+  m_Name: CompleteQuestResponse
   m_EditorClassIdentifier: 
   dialogue:
-  - Acabaram as respostas
-  responses:
-  - responseText: 'Sla '
-    dialogueObject: {fileID: 11400000, guid: 463432d7f8ffd704797a965e424065a6, type: 2}
+  - Muito obrigada!!
+  responses: []
+  npcName: Ash
+  npcSprite: {fileID: 21300000, guid: aa05728b42a766e4d84c75b144f93553, type: 3}

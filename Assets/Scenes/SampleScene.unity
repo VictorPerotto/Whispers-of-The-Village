@@ -243,7 +243,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 1347279569}
   textLabel: {fileID: 2020774199}
   npcName: {fileID: 706505087}
-  npcSprite: {fileID: 1204535048}
+  npcSprite: {fileID: 1204535050}
 --- !u!114 &200514658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -393,6 +394,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e54e61c22c60cb45a4f5eb958a89f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {fileID: 1652070610}
+  smoothing: 0.1
 --- !u!1 &623524453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,7 +1207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1438,7 +1453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652070606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.87, y: 0.02, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1707,7 +1722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueObject: {fileID: 11400000, guid: 7777c50ee01f0b74fa1fc035829ede80, type: 2}
   events:
-  - name: Mim de quest papai
+  - name: "Ol\xE1 querida Ash, o que tem de bom para mim hoje?"
     onPickedResponse:
       m_PersistentCalls:
         m_Calls:
@@ -1716,14 +1731,14 @@ MonoBehaviour:
           m_MethodName: AddQuest
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 7da35e79055b91c48827e3bd624a5f5b, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: 9d5b15315242f214a9d7a208bfab438d, type: 2}
             m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - name: Some daqui filho da puta
+  - name: "Trouxe essa encomenda para voc\xEA"
     onPickedResponse:
       m_PersistentCalls:
         m_Calls:
@@ -1732,7 +1747,7 @@ MonoBehaviour:
           m_MethodName: CompleteQuest
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 7da35e79055b91c48827e3bd624a5f5b, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: 9d5b15315242f214a9d7a208bfab438d, type: 2}
             m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0

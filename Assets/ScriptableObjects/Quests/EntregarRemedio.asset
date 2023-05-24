@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea57473875a084948863fe12ec121305, type: 3}
-  m_Name: Quest_PeixeAndador
+  m_Name: EntregarRemedio
   m_EditorClassIdentifier: 
-  questItemSO: {fileID: 11400000, guid: c0a16dadb86beec46b48d96fe41b06a5, type: 2}
-  questName: O peixe que andava
-  questDescription: "O peixe que anda e simplesmente \xE9 assim"
-  questGiverName: Joao
-  questEnderName: Joaninha
-  optionalQuestEnders:
-  - Alguem
-  - Mordidosa
+  questItemSO: {fileID: 11400000, guid: b7a416f427d8cc74f981c415f4b1c6cb, type: 2}
+  questName: '"Um pouco de ajuda"'
+  questDescription: "Ash pediu para entregar esse rem\xE9dio ao Clarck, parece que
+    ele est\xE1 meio gripado"
+  questGiverName: 'De: Ash'
+  questEnderName: 'Para: Ash'
+  optionalQuestEnders: []

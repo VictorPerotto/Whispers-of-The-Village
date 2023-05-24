@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator anim;
     private float currentSpeed;
     private float lastMoveY;
+    private float lastMoveX;
     private float alternateIdleBuffer;
     private Vector2 lastMoveDirection;
     private bool isMoving;
@@ -45,7 +46,6 @@ public class Player : MonoBehaviour
         if(dialogueUI.IsOpen) return;
         ProcessInputs();
         Interact();
-        Move();
         
         if(Input.GetKeyDown(KeyCode.Tab))
         {
@@ -68,20 +68,11 @@ public class Player : MonoBehaviour
         isSprinting = Input.GetKey(KeyCode.LeftShift);
         moveDirection = new Vector2 (horizontalMove, verticalMove).normalized;
 
-        if(verticalMove != 0 || horizontalMove != 0)
-        {
-            isMoving = true;
-        }
+        if(verticalMove != 0 || horizontalMove != 0) {isMoving = true;}
+        else{isMoving = false;}
 
-        else
-        {
-            isMoving = false;
-        }
-
-        if(verticalMove != 0)
-        {
-            lastMoveY = verticalMove;
-        }
+        if(verticalMove != 0) lastMoveY = verticalMove;
+        if(horizontalMove != 0) lastMoveX = horizontalMove;
     }
 
     void Move()
@@ -117,6 +108,7 @@ public class Player : MonoBehaviour
         anim.SetFloat("AnimMoveY", moveDirection.y);
         anim.SetFloat("AnimMoveSpeed", currentSpeed);
         anim.SetFloat("AnimLastMoveY", lastMoveY);
+        anim.SetFloat("AnimLastMoveX", lastMoveX);
     }
 
     void Interact()

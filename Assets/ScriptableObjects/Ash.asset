@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a84df7cba02322742b6eb24317ac3479, type: 3}
-  m_Name: Ester
+  m_Name: Ash
   m_EditorClassIdentifier: 
   dialogue:
   - Ola amigo, como vai?
   responses:
-  - responseText: Mim de quest papai
-    dialogueObject: {fileID: 11400000, guid: bbdc327114cd6a846bb88e817e34af2e, type: 2}
-  - responseText: Some daqui filho da puta
-    dialogueObject: {fileID: 11400000, guid: 090681150d3dd7944bc4f31707182f8b, type: 2}
+  - responseText: "Ol\xE1 querida Ash, o que tem de bom para mim hoje?"
+    dialogueObject: {fileID: 11400000, guid: bf15534f1c0217e4f9720cf5e7c22de1, type: 2}
+  - responseText: "Trouxe essa encomenda para voc\xEA"
+    dialogueObject: {fileID: 11400000, guid: 65490d2786ac30c4ea77ca0562e34219, type: 2}
+  npcName: Ash
+  npcSprite: {fileID: 21300000, guid: aa05728b42a766e4d84c75b144f93553, type: 3}
