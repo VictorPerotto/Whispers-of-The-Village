@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private bool isMoving;
     private bool isSprinting;
     private bool isInteracting;
+    private bool tabDown;
     private Rigidbody2D rb;
     private Vector2 moveDirection;
     
@@ -45,13 +46,9 @@ public class Player : MonoBehaviour
         
         if(dialogueUI.IsOpen) return;
         ProcessInputs();
+
+        if(QuestLogUIController.Instance.IsOpen) return;
         Interact();
-        
-        if(Input.GetKeyDown(KeyCode.Tab))
-        {
-            if(QuestLogUIController.Instance.gameObject.activeInHierarchy) QuestLogUIController.Instance.Hide();
-            else QuestLogUIController.Instance.Show();
-        }
     }
 
     void FixedUpdate() 
@@ -66,7 +63,14 @@ public class Player : MonoBehaviour
         float verticalMove = Input.GetAxisRaw("Vertical");
         isInteracting = Input.GetKeyDown(KeyCode.E);
         isSprinting = Input.GetKey(KeyCode.LeftShift);
+        tabDown = Input.GetKeyDown(KeyCode.Tab);
         moveDirection = new Vector2 (horizontalMove, verticalMove).normalized;
+
+        if(tabDown)
+        {
+            if(QuestLogUIController.Instance.gameObject.activeInHierarchy) QuestLogUIController.Instance.Hide();
+            else QuestLogUIController.Instance.Show();
+        }
 
         if(verticalMove != 0 || horizontalMove != 0) {isMoving = true;}
         else{isMoving = false;}
@@ -116,6 +120,8 @@ public class Player : MonoBehaviour
         if(isInteracting)
         {
             Interactable?.Interact(this);
+            rb.velocity = Vector2.zero;
+            currentSpeed = 0;
         }
     }
 

@@ -19,6 +19,7 @@ public class QuestLogUIController : MonoBehaviour
     [SerializeField] private Transform optionalEnderPrefab;
     [SerializeField] private Image questIcon;
 
+    public bool IsOpen { get; private set; }
 
     private void Awake() 
     {
@@ -95,11 +96,13 @@ public class QuestLogUIController : MonoBehaviour
     public void Show()  
     {
         this.gameObject.SetActive(true);
+        IsOpen = true;
         ClearQuestInfo();
     }
 
     public void Hide()
     {
         this.gameObject.SetActive(false);
+        IsOpen = false;
     }
 }

@@ -126,10 +126,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jane_idle01_down_1
+      name: jane_idle01_down_2
       rect:
         serializedVersion: 2
-        x: 80
+        x: 160
         y: 0
         width: 80
         height: 111
@@ -147,10 +147,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jane_idle01_down_2
+      name: jane_idle01_down_6
       rect:
         serializedVersion: 2
-        x: 160
+        x: 480
         y: 0
         width: 80
         height: 111
@@ -168,10 +168,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jane_idle01_down_3
+      name: jane_idle01_down_1
       rect:
         serializedVersion: 2
-        x: 240
+        x: 80
         y: 0
         width: 80
         height: 111
@@ -210,10 +210,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jane_idle01_down_5
+      name: jane_idle01_down_3
       rect:
         serializedVersion: 2
-        x: 400
+        x: 240
         y: 0
         width: 80
         height: 111
@@ -231,10 +231,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jane_idle01_down_6
+      name: jane_idle01_down_5
       rect:
         serializedVersion: 2
-        x: 480
+        x: 400
         y: 0
         width: 80
         height: 111
@@ -263,12 +263,12 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       jane_idle01_down_0: 168852463
-      jane_idle01_down_2: -1734239736
-      jane_idle01_down_6: 27463497
-      jane_idle01_down_1: -1386119891
+      jane_idle01_down_2: -1386119891
+      jane_idle01_down_6: -1734239736
+      jane_idle01_down_1: 403234191
       jane_idle01_down_4: -48168867
-      jane_idle01_down_3: 403234191
-      jane_idle01_down_5: -1386805081
+      jane_idle01_down_3: -1386805081
+      jane_idle01_down_5: 27463497
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
