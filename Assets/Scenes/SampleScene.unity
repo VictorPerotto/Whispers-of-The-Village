@@ -307,7 +307,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0657115, y: -1.7120209}
+  m_Offset: {x: 0.0657115, y: -1.3192921}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -318,7 +318,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8695364, y: 1.5556145}
+  m_Size: {x: 1.8695364, y: 2.341072}
   m_EdgeRadius: 0
 --- !u!212 &50369288
 SpriteRenderer:
@@ -396,7 +396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 56208267}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Bridge(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2829,7 +2829,7 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 1.1820824, y: 1.7577863}
-      - {x: -3.0532095, y: 2.2022014}
+      - {x: -3.3037508, y: 2.2379928}
       - {x: -9.655451, y: 1.7300282}
       - {x: -9.896488, y: -2.1949568}
       - {x: -7.518399, y: -1.2710352}
@@ -3482,7 +3482,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.17317772, y: -1.8258047}
+  m_Offset: {x: 0.17331696, y: -1.8354301}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3493,7 +3493,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.166172, y: 1.5405064}
+  m_Size: {x: 2.8591614, y: 1.5597572}
   m_EdgeRadius: 0
 --- !u!212 &904748140
 SpriteRenderer:
@@ -3906,7 +3906,7 @@ GameObject:
   - component: {fileID: 1065618172}
   - component: {fileID: 1065618174}
   - component: {fileID: 1065618173}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: BridgeFront(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3941,7 +3941,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.025523543, y: -0.2151289}
+  m_Offset: {x: 0.025523543, y: -0.009238243}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3952,7 +3952,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7393477, y: 0.19389534}
+  m_Size: {x: 2.7393477, y: 0.60567665}
   m_EdgeRadius: 0
 --- !u!212 &1065618174
 SpriteRenderer:
@@ -3994,7 +3994,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 962389711
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 27e326f31f0052e499f4538c8995558e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5481,7 +5481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1494769219}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5933,7 +5933,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0077781677, y: 1.1066046}
+  m_Offset: {x: 0.0077781677, y: 1.2417297}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -5944,7 +5944,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.410534, y: 1.4779186}
+  m_Size: {x: 2.410534, y: 2.6750412}
   m_EdgeRadius: 0
 --- !u!212 &1642901134
 SpriteRenderer:
@@ -5997,7 +5997,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 1
+  m_SpriteSortPoint: 0
 --- !u!4 &1642901135
 Transform:
   m_ObjectHideFlags: 0
@@ -6027,6 +6027,8 @@ GameObject:
   - component: {fileID: 1652070611}
   - component: {fileID: 1652070612}
   - component: {fileID: 1652070613}
+  - component: {fileID: 1652070615}
+  - component: {fileID: 1652070614}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -6095,7 +6097,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 962389711
   m_SortingLayer: 1
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: 168852463, guid: d625549b2cc97454ea5ae06fb8e4aa5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6115,7 +6117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652070606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.5, y: -23.3, z: 0}
+  m_LocalPosition: {x: 10.51, y: -25.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6173,9 +6175,39 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01, y: -0.4}
-  m_Size: {x: 0.35, y: 0.18}
+  m_Offset: {x: -0.009999995, y: -0.4067636}
+  m_Size: {x: 0.35000008, y: 0.17548944}
   m_Direction: 1
+--- !u!114 &1652070614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652070606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d625cdf8a6bd4c54a87df253c98e7cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRender: {fileID: 1652070609}
+  myCollider: {fileID: 1652070613}
+--- !u!70 &1652070615
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652070606}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.010924816, y: -0.8899956}
+  m_Size: {x: 0.5852728, y: 2.9015923}
+  m_Direction: 0
 --- !u!1 &1665027380
 GameObject:
   m_ObjectHideFlags: 0
@@ -6264,7 +6296,7 @@ GameObject:
   - component: {fileID: 1680829096}
   - component: {fileID: 1680829095}
   - component: {fileID: 1680829094}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: BridgeVertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6363,7 +6395,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 962389711
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 4971ca2dc85d3164c88442abb0365a40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6433,7 +6465,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1704653485}
   - component: {fileID: 1704653487}
-  - component: {fileID: 1704653486}
   m_Layer: 6
   m_Name: MegansHouseStair
   m_TagString: Untagged
@@ -6456,32 +6487,6 @@ Transform:
   m_Father: {fileID: 1942617671}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1704653486
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704653484}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.014780998, y: -1.462719}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.76, y: 3.4}
-    newSize: {x: 0.76, y: 3.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7008724, y: 0.23568726}
-  m_EdgeRadius: 0
 --- !u!212 &1704653487
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6591,7 +6596,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 962389711
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: ee8fb27578206c84dbc4ce19c51b4070, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6951,7 +6956,7 @@ GameObject:
   - component: {fileID: 1802523936}
   - component: {fileID: 1802523938}
   - component: {fileID: 1802523937}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: BridgeBack(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7039,7 +7044,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 962389711
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 4cc6c33fc806da74ea5ea26918fa5251, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8017,7 +8022,7 @@ GameObject:
   - component: {fileID: 2015795971}
   - component: {fileID: 2015795973}
   - component: {fileID: 2015795972}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: BridgeFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8052,7 +8057,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03775215, y: -0.20860195}
+  m_Offset: {x: 0.03775215, y: -0.02396965}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8063,7 +8068,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7349358, y: 0.19685364}
+  m_Size: {x: 2.7349358, y: 0.56611824}
   m_EdgeRadius: 0
 --- !u!212 &2015795973
 SpriteRenderer:
@@ -8105,7 +8110,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 962389711
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: f088a979db8fcf44395db32390cdf372, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8579,7 +8584,7 @@ GameObject:
   - component: {fileID: 2068531360}
   - component: {fileID: 2068531362}
   - component: {fileID: 2068531361}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: BridgeBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8667,7 +8672,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 962389711
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: d1a7149d2974b7b4fa7f71055525dc81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
