@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 438533433206817497}
   - component: {fileID: 2532693387459337730}
   - component: {fileID: 4403416576888693627}
+  - component: {fileID: 9126272775735612298}
   m_Layer: 6
   m_Name: CyanDarkTreee
   m_TagString: Untagged
@@ -98,6 +99,18 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00023473741, y: -1.3801423}
+  m_Offset: {x: 0.00023473741, y: -0.06}
   m_Size: {x: 0.5683481, y: 0.364965}
   m_Direction: 1
+--- !u!114 &9126272775735612298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871196373326940504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1b924644d06af429e2ccba91172220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

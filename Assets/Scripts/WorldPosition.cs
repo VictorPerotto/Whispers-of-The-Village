@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class WorldPosition : MonoBehaviour
 {
-    [SerializeField] private Renderer myRender;
-    [SerializeField] private Collider2D myCollider;
-    private float myColliderHeight;
+    /*[SerializeField] private Collider2D myCollider;
+    private float myColliderHeight;*/
 
-    void OnTriggerStay2D(Collider2D other)
+    private Renderer myRender;
+    private Collider2D myCollider;
+    private float topCollider;
+    
+    private void Start() 
+    {
+        myRender = GetComponent<Renderer>();
+        myCollider = GetComponent<Collider2D>();
+    }
+
+    /*void OnTriggerStay2D(Collider2D other)
     {
         if(other.gameObject.layer == 6)
         {
@@ -26,5 +35,11 @@ public class WorldPosition : MonoBehaviour
                 myRender.sortingOrder = -5;
             }
         }
+    }*/
+
+    private void Update() 
+    {
+        topCollider = (myCollider.bounds.center.y + myCollider.bounds.extents.y);
+        myRender.sortingOrder = Mathf.RoundToInt(topCollider * 100f) * -1;
     }
 }

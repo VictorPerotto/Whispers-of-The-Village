@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1421727080390957603}
   - component: {fileID: 4695902598137465036}
   - component: {fileID: 3550543277111383237}
+  - component: {fileID: 2583053580095120794}
   m_Layer: 6
   m_Name: OrangeTree
   m_TagString: Untagged
@@ -98,6 +99,18 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015566155, y: -1.3555559}
+  m_Offset: {x: -0.015566155, y: 0.35}
   m_Size: {x: 0.5535852, y: 0.3095751}
   m_Direction: 1
+--- !u!114 &2583053580095120794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7035562002301342941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1b924644d06af429e2ccba91172220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

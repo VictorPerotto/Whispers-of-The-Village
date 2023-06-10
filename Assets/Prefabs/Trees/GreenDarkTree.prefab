@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1422875896899153075}
   - component: {fileID: 8626934720443115543}
   - component: {fileID: 5997231937470274124}
+  - component: {fileID: -6292613667154734976}
   m_Layer: 6
   m_Name: GreenDarkTree
   m_TagString: Untagged
@@ -98,6 +99,18 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0438058, y: -1.369234}
+  m_Offset: {x: 0.0438058, y: 0.36}
   m_Size: {x: 0.56194603, y: 0.37379554}
   m_Direction: 1
+--- !u!114 &-6292613667154734976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5713477678729259506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1b924644d06af429e2ccba91172220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

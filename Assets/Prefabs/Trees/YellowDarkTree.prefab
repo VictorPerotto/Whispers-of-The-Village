@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7381862512804861252}
   - component: {fileID: 4870292464914082323}
   - component: {fileID: 633624094416607785}
+  - component: {fileID: 9194617995990744130}
   m_Layer: 6
   m_Name: YellowDarkTree
   m_TagString: Untagged
@@ -98,6 +99,18 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010064528, y: -1.3719101}
+  m_Offset: {x: -0.010064528, y: 0.34}
   m_Size: {x: 0.5479793, y: 0.3146899}
   m_Direction: 1
+--- !u!114 &9194617995990744130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7535208108995814114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1b924644d06af429e2ccba91172220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
