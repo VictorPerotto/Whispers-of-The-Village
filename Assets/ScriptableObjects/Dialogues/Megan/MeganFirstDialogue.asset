@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a84df7cba02322742b6eb24317ac3479, type: 3}
+  m_Name: MeganFirstDialogue
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Hey Jane, como voc\xEA est\xE1? "
+  - "Estou muito feliz que voc\xEA aceitou o convite para ser nossa nova carteira!"
+  - "Como eu n\xE3o estava conseguindo dar conta das entregas sozinha, elas acabaram
+    acumulando um pouco "
+  - "Como \xE9 seu primeiro dia vamos come\xE7ar com calma"
+  - "Clark vem se queixando de uma forte gripe nos \xFAltimos dias, ent\xE3o preparei
+    esse rem\xE9dio especialmente para ele"
+  - "Ele est\xE1 praticamente sempre trabalhando, ent\xE3o sugiro que procure ele
+    na ferraria, a oeste da cidade"
+  - "Em seguida temos essa carta endere\xE7ada ao Peter, aparentemente de algum parente
+    distante "
+  - "Voc\xEA vai encontra-lo ao Leste, na sua fazenda, por estar sempre cuidando
+    dos animais ele tem dificuldades de se afastar de l\xE1"
+  - "Por \xFAltimo temos essa carte sem remetente, ela est\xE1 endere\xE7ada para
+    a Kelly, a melhor cozinheira de toda a cidade"
+  - "Provavelmente deve ser um pedido especial, s\xE9rio se voc\xEA n\xE3o experimentou
+    nenhum dos seus pratos, n\xE3o sabe o que \xE9 aproveitar o bom da vida"
+  - "Voc\xEA deve encontrar ela ao sul da cidade, na sua casa/cozinha, voc\xEA vai
+    saber que est\xE1 proxima quando sentir o cheiro maravilhoso de comida no ar"
+  - "Uau, bastante coisa para um primeiro dia, se precisar de ajuda ou tiver alguma
+    d\xFAvida, estarei aqui!"
+  responses:
+  - responseText: Tudo bem, acho que estou pronta!
+    dialogueObject: {fileID: 0}
+  npcName: Megan
+  npcSprite: {fileID: 21300000, guid: 37d543c12c0accd4f87050e889d30115, type: 3}

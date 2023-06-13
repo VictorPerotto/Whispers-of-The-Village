@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         float verticalMove = Input.GetAxisRaw("Vertical");
         isInteracting = Input.GetKeyDown(KeyCode.E);
         isSprinting = Input.GetKey(KeyCode.LeftShift);
-        tabDown = Input.GetKeyDown(KeyCode.Tab);
+        tabDown = Input.GetKeyDown(KeyCode.Q);
         moveDirection = new Vector2 (horizontalMove, verticalMove).normalized;
 
         if(tabDown)

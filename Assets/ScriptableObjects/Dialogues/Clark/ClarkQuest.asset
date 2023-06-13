@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a84df7cba02322742b6eb24317ac3479, type: 3}
+  m_Name: ClarkQuest
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Hey Jane, voc\xEA poderia fazer um favor para mim? cof cof, \xE9 uma entrega
+    para uma pessoa especial."
+  responses:
+  - responseText: "Claro, o que voc\xEA precisa?"
+    dialogueObject: {fileID: 11400000, guid: 8e32c9e3916e78a4191bb76f8210529c, type: 2}
+  - responseText: Desculpa, mas estou muito atarefada hoje.
+    dialogueObject: {fileID: 11400000, guid: 92e17b62168525846807c2e1d4c77fa4, type: 2}
+  npcName: Clark
+  npcSprite: {fileID: 21300000, guid: a4539425178d273479f0514cb6496fba, type: 3}

@@ -3932,6 +3932,22 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5287365309424421086, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287365309424421086, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287365309424421086, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287365309424421086, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5287365309612901596, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3951,6 +3967,10 @@ PrefabInstance:
     - target: {fileID: 5287365309612901596, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287365309703598036, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5287365309963177900, guid: 5bef6fa4279e6eb45adad4fd994dcdd5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4129,8 +4149,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4073bb7b3de3ef942ac4f48d2b6a8a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
-  events: []
+  dialogueObject: {fileID: 11400000, guid: 0a2d1ad9c2a8363419924424dbfab88a, type: 2}
+  events:
+  - name: Claro, eu adoraria!
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: "Na verdade estou apenas de passagem, vim entregar essa carta para voc\xEA"
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1652070611}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: CompleteQuest
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 5adbaaccad9889342a8c129b3b659166, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1652070611}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: AddQuest
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 174db980d7d34f24d99f899537a7596b, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 980804807}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 3b4552404e43bea47b4cf0fd0806cc0e, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1590990769}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 6f031eeba28ac70468803342112a20bc, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: Adorei o convite, mas preciso ir agora.
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &980804807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4143,7 +4223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d8508d0ae84924ca5ffb19a9d27721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
+  dialogueObject: {fileID: 11400000, guid: 3b4552404e43bea47b4cf0fd0806cc0e, type: 2}
 --- !u!212 &980804808
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4223,6 +4303,7 @@ GameObject:
   - component: {fileID: 996340588}
   - component: {fileID: 996340587}
   - component: {fileID: 996340586}
+  - component: {fileID: 996340590}
   - component: {fileID: 996340585}
   - component: {fileID: 996340584}
   - component: {fileID: 996340583}
@@ -4310,8 +4391,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4073bb7b3de3ef942ac4f48d2b6a8a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
-  events: []
+  dialogueObject: {fileID: 11400000, guid: 41d047a8d33fbf84a8c1e1c66d56dccc, type: 2}
+  events:
+  - name: Tudo bem, acho que estou pronta!
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1652070611}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: AddQuest
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 5adbaaccad9889342a8c129b3b659166, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1652070611}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: AddQuest
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: bd3c0b76750b0784c9c2f056c511ec02, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1652070611}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: AddQuest
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 9d5b15315242f214a9d7a208bfab438d, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 996340587}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 33e3e79b67d02d14fb46fb3ad5bbbd12, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1887519086}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 7e144480eb9c2ea49b3e21773d1ad557, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 980804807}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 0a2d1ad9c2a8363419924424dbfab88a, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1303648800}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 23136276f6022454b850290173f9a42f, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &996340587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4324,7 +4493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d8508d0ae84924ca5ffb19a9d27721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
+  dialogueObject: {fileID: 11400000, guid: 41d047a8d33fbf84a8c1e1c66d56dccc, type: 2}
 --- !u!212 &996340588
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4392,6 +4561,64 @@ Transform:
   m_Father: {fileID: 1054103167}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &996340590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996340581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4073bb7b3de3ef942ac4f48d2b6a8a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueObject: {fileID: 11400000, guid: 2e7026dedbe50a64290c992e28b58385, type: 2}
+  events:
+  - name: "Sim, referente ao rem\xE9dio."
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Sim, referente a carta do Peter.
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Sim, referente a carta da Kelly.
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: "N\xE3o, no momento nenhuma."
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Na verdade, Clark me pediu para entregar isto.
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1652070611}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: CompleteQuest
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 0b931b5dda69b6b45a31785cd9e53c97, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 996340587}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 33e3e79b67d02d14fb46fb3ad5bbbd12, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1006728511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4445645837061007525, guid: bbfc2b09f9c06fd4da09b5e37805e407, type: 3}
@@ -5170,7 +5397,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 50}
+  m_SizeDelta: {x: 1600, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1274765860
 GameObject:
@@ -5217,12 +5444,13 @@ GameObject:
   - component: {fileID: 1303648801}
   - component: {fileID: 1303648800}
   - component: {fileID: 1303648799}
+  - component: {fileID: 1303648803}
   - component: {fileID: 1303648797}
   - component: {fileID: 1303648798}
   - component: {fileID: 1303648796}
   - component: {fileID: 1303648795}
   m_Layer: 6
-  m_Name: ClarckNPC
+  m_Name: ClarkNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5304,8 +5532,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4073bb7b3de3ef942ac4f48d2b6a8a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
-  events: []
+  dialogueObject: {fileID: 11400000, guid: 23136276f6022454b850290173f9a42f, type: 2}
+  events:
+  - name: Bom, Megan pediu para entregar isto, deve ajudar.
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1652070611}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: CompleteQuest
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 9d5b15315242f214a9d7a208bfab438d, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1303648800}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: ef87b077d065a9b40b400f88298a3dca, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: "Bom, acho que \xE9 melhor evitar o frio hein!"
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &1303648800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5318,7 +5578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d8508d0ae84924ca5ffb19a9d27721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
+  dialogueObject: {fileID: 11400000, guid: 31ffe7f35f8c8e34882e403200844647, type: 2}
 --- !u!212 &1303648801
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5386,6 +5646,64 @@ Transform:
   m_Father: {fileID: 1054103167}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1303648803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303648794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4073bb7b3de3ef942ac4f48d2b6a8a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueObject: {fileID: 11400000, guid: ef87b077d065a9b40b400f88298a3dca, type: 2}
+  events:
+  - name: "Claro o que voc\xEA deseja?"
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1652070611}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: AddQuest
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 0b931b5dda69b6b45a31785cd9e53c97, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 996340587}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 2e7026dedbe50a64290c992e28b58385, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1303648800}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 31ffe7f35f8c8e34882e403200844647, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: Olha, na verdade estou meio ocupada hoje.
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1331061584
 GameObject:
   m_ObjectHideFlags: 0
@@ -6753,8 +7071,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4073bb7b3de3ef942ac4f48d2b6a8a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
-  events: []
+  dialogueObject: {fileID: 11400000, guid: 6f031eeba28ac70468803342112a20bc, type: 2}
+  events:
+  - name: "Bom, acho que vou deixar isso aqui, n\xE3o comam a entrega amiguinhos!"
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1652070611}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: CompleteQuest
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 174db980d7d34f24d99f899537a7596b, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1590990769}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: cfdd2136c96c7ba4f900c716e98cdcc1, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1590990769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6767,7 +7113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d8508d0ae84924ca5ffb19a9d27721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
+  dialogueObject: {fileID: 11400000, guid: cfdd2136c96c7ba4f900c716e98cdcc1, type: 2}
 --- !u!212 &1590990770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8427,7 +8773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d8508d0ae84924ca5ffb19a9d27721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
+  dialogueObject: {fileID: 11400000, guid: 69d513ae8197b2a409d34e543ba6f664, type: 2}
 --- !u!58 &1869415779
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8757,8 +9103,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4073bb7b3de3ef942ac4f48d2b6a8a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
-  events: []
+  dialogueObject: {fileID: 11400000, guid: 7e144480eb9c2ea49b3e21773d1ad557, type: 2}
+  events:
+  - name: "Ol\xE1 Peter, na verdade tenho um entrega para voc\xEA!"
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1652070611}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: CompleteQuest
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: bd3c0b76750b0784c9c2f056c511ec02, type: 2}
+            m_ObjectArgumentAssemblyTypeName: QuestSO, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1887519086}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: f04b19176ec5eb5489e7802028a7123a, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: Sim, apenas dando uma volta
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &1887519086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8771,7 +9149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d8508d0ae84924ca5ffb19a9d27721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
+  dialogueObject: {fileID: 11400000, guid: f04b19176ec5eb5489e7802028a7123a, type: 2}
 --- !u!4 &1887519087
 Transform:
   m_ObjectHideFlags: 0

@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea57473875a084948863fe12ec121305, type: 3}
-  m_Name: EntregarRemedio
+  m_Name: CartaParaPeter
   m_EditorClassIdentifier: 
-  questItemSO: {fileID: 11400000, guid: b7a416f427d8cc74f981c415f4b1c6cb, type: 2}
-  questName: '"Um pouco de ajuda"'
-  questDescription: "Ash pediu para entregar esse rem\xE9dio ao Clarck, parece que
-    ele est\xE1 meio gripado"
-  questGiverName: 'De: Ash'
-  questEnderName: 'Para: Ash'
+  questItemSO: {fileID: 11400000, guid: ec649fcb9194c72429a543b9b46ec54c, type: 2}
+  questName: '"Carta para Peter"'
+  questDescription: "Uma carta para Peter o fazendeiro, o endere\xE7o do remetente
+    \xE9 consideravelmente longe daqui, provavelmente algum parente distante ou algo
+    do tipo"
+  questGiverName: 'De: Donna'
+  questEnderName: 'Para: Peter'
   optionalQuestEnders: []

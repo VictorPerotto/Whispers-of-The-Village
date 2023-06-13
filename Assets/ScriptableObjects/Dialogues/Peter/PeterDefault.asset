@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a84df7cba02322742b6eb24317ac3479, type: 3}
+  m_Name: PeterDefault
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Ol\xE1 Jane como voc\xEA esta? Apenas passeando?"
+  responses:
+  - responseText: "Ol\xE1 Peter, na verdade tenho um entrega para voc\xEA!"
+    dialogueObject: {fileID: 11400000, guid: a15b93371fde94148a7cfdac383deab2, type: 2}
+  - responseText: Sim, apenas dando uma volta
+    dialogueObject: {fileID: 11400000, guid: 03e9849bab7f4de46ae19a89cbd3868d, type: 2}
+  npcName: Peter
+  npcSprite: {fileID: 21300000, guid: 81263d77b166994449d9feb124293ce9, type: 3}

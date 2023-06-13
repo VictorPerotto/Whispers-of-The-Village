@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe467c3060b9e284db90c80cd4ad5234, type: 3}
-  m_Name: Remedio
+  m_Name: Hamburguer
   m_EditorClassIdentifier: 
-  itemName: "Rem\xE9dio"
-  itemIcon: {fileID: 21300000, guid: afa7007dfabe8ac43ab2b4b2b16541b6, type: 3}
-  itemDescription: "Um rem\xE9dio"
+  itemName: Hamburgueres
+  itemIcon: {fileID: 21300000, guid: 84b2d42d25fb3e349a1ce51584c50b68, type: 3}
+  itemDescription: 

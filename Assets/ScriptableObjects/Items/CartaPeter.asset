@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe467c3060b9e284db90c80cd4ad5234, type: 3}
-  m_Name: Remedio
+  m_Name: CartaPeter
   m_EditorClassIdentifier: 
-  itemName: "Rem\xE9dio"
-  itemIcon: {fileID: 21300000, guid: afa7007dfabe8ac43ab2b4b2b16541b6, type: 3}
-  itemDescription: "Um rem\xE9dio"
+  itemName: Carta
+  itemIcon: {fileID: 21300000, guid: 029095cb9e20e7b42a3e58089194610f, type: 3}
+  itemDescription: Uma carta de um parente distante

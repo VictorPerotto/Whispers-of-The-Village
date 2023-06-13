@@ -26,6 +26,7 @@ public class QuestButtonUI : MonoBehaviour
 
     public void UpdateButtonVisual() 
     {
+        questIconSlot.color = Color.white;
         questIconSlot.sprite = questSO.GetQuestItemSO().GetItemIcon();
         questNameSlot.text = questSO.GetQuestName();
     }

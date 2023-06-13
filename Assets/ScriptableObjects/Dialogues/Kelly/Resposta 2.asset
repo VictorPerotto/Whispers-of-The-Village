@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a84df7cba02322742b6eb24317ac3479, type: 3}
+  m_Name: Resposta 2
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Nossa, que estranho, n\xE3o estava esperando uma carta de ningu\xE9m, al\xE9m
+    de que, essa pata de corvo, sinistro."
+  - ...
+  - "Bom, \xE9 um pedido especial de hamburgueres, nada muito incomum, por\xE9m..."
+  - "Tem instru\xE7\xF5es bem especificas de entrega, se \xE9 que posso dizer assim."
+  - Aqui diz "a comida deve ser entregue no velho tronco, ao leste da casa de Jane,
+    pode ser deixado em cima do tronco".
+  - "Bom, tenho algumas coisas prontas j\xE1, acredito que voc\xEA fara a entrega
+    certo?"
+  responses:
+  - responseText: Isso mesmo, pedido deveras intrigante...
+    dialogueObject: {fileID: 0}
+  npcName: Kelly
+  npcSprite: {fileID: 21300000, guid: 37c46f1619e43d64595043f9416c973a, type: 3}
