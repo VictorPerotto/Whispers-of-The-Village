@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 285338029154320605}
   - component: {fileID: 2992540620815809677}
   - component: {fileID: 5311933964759390095}
+  - component: {fileID: 1317171826420562124}
   m_Layer: 6
   m_Name: MediumRock (1)
   m_TagString: Untagged
@@ -116,3 +117,15 @@ PolygonCollider2D:
       - {x: 0.688612, y: -0.09924173}
       - {x: 0.06992927, y: -0.038792253}
       - {x: -0.62660164, y: -0.09877926}
+--- !u!114 &1317171826420562124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745630387608914975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1b924644d06af429e2ccba91172220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

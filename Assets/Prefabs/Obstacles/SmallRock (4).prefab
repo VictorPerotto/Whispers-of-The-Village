@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3223432861278679624}
   - component: {fileID: 5311998186032604607}
   - component: {fileID: 5642665278147324383}
+  - component: {fileID: 2222587411097181494}
   m_Layer: 6
   m_Name: SmallRock (4)
   m_TagString: Untagged
@@ -118,3 +119,15 @@ PolygonCollider2D:
       - {x: 0.075246885, y: -0.17478739}
       - {x: 0.29999998, y: -0.090632915}
       - {x: 0.30366188, y: 0.03380198}
+--- !u!114 &2222587411097181494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554621253375466528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1b924644d06af429e2ccba91172220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
