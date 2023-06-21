@@ -83,6 +83,7 @@ public class DialogueUI : MonoBehaviour
 
     public void CloseDialogueBox()
     {
+        Cursor.visible = false;
         IsOpen = false;
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;

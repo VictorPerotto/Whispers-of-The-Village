@@ -95,6 +95,7 @@ public class QuestLogUIController : MonoBehaviour
 
     public void Show()  
     {
+        Cursor.visible = true;
         this.gameObject.SetActive(true);
         IsOpen = true;
         ClearQuestInfo();
@@ -102,6 +103,7 @@ public class QuestLogUIController : MonoBehaviour
 
     public void Hide()
     {
+        Cursor.visible = false;
         this.gameObject.SetActive(false);
         IsOpen = false;
     }
