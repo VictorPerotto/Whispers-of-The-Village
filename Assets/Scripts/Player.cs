@@ -17,9 +17,9 @@ public class Player : MonoBehaviour
     private bool isMoving;
     private bool isSprinting;
     private bool isInteracting;
-    private bool tabDown;
     private Rigidbody2D rb;
     private Vector2 moveDirection;
+    private bool canMove;
     
     [SerializeField] private List<QuestSO> questList = new List<QuestSO>();
     [SerializeField] private List<ItemSO> itemList = new List<ItemSO>();
@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     public DialogueUI DialogueUI => dialogueUI;
     public IInteractable Interactable { get; set; }
 
+    [SerializeField] MenuController menuController;
+
     private void Awake() 
     {
         Instance = this;
@@ -35,6 +37,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        canMove = true;
+        Cursor.visible = false;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -44,7 +48,7 @@ public class Player : MonoBehaviour
         Animate();
         alternateIdleBuffer -= Time.deltaTime;
         
-        if(dialogueUI.IsOpen) return;
+        if(dialogueUI.IsOpen || canMove == false) return;
         ProcessInputs();
 
         if(QuestLogUIController.Instance.IsOpen) return;
@@ -63,20 +67,24 @@ public class Player : MonoBehaviour
         float verticalMove = Input.GetAxisRaw("Vertical");
         isInteracting = Input.GetKeyDown(KeyCode.E);
         isSprinting = Input.GetKey(KeyCode.LeftShift);
-        tabDown = Input.GetKeyDown(KeyCode.Q);
-        moveDirection = new Vector2 (horizontalMove, verticalMove).normalized;
 
-        if(tabDown)
-        {
-            if(QuestLogUIController.Instance.gameObject.activeInHierarchy) QuestLogUIController.Instance.Hide();
-            else QuestLogUIController.Instance.Show();
-        }
+        moveDirection = new Vector2 (horizontalMove, verticalMove).normalized;
 
         if(verticalMove != 0 || horizontalMove != 0) {isMoving = true;}
         else{isMoving = false;}
 
         if(verticalMove != 0) lastMoveY = verticalMove;
-        if(horizontalMove != 0) lastMoveX = horizontalMove;
+    }
+
+    public void StopMove()
+    {
+        currentSpeed = 0;
+        canMove = false;
+    }
+
+    public void ReturnMove()
+    {
+        canMove = true;
     }
 
     void Move()
@@ -112,7 +120,6 @@ public class Player : MonoBehaviour
         anim.SetFloat("AnimMoveY", moveDirection.y);
         anim.SetFloat("AnimMoveSpeed", currentSpeed);
         anim.SetFloat("AnimLastMoveY", lastMoveY);
-        anim.SetFloat("AnimLastMoveX", lastMoveX);
     }
 
     void Interact()
@@ -122,6 +129,7 @@ public class Player : MonoBehaviour
             Interactable?.Interact(this);
             rb.velocity = Vector2.zero;
             currentSpeed = 0;
+            Cursor.visible = true;
         }
     }
 
