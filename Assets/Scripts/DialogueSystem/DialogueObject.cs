@@ -10,7 +10,6 @@ public class DialogueObject : ScriptableObject
     [SerializeField] private Response[] responses;
     [SerializeField] private string npcName;
     [SerializeField] private Sprite npcSprite;
-
     //para que o texto não seja acessivel diretamente pelas outras classes
     public string[] Dialogue => dialogue;    
     public string NpcName => npcName;
